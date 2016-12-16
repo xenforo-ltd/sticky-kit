@@ -73,6 +73,7 @@ $.fn.stick_in_parent = (opts={}) ->
         if fixed
           fixed = false
           bottomed = false
+          offset = offset_top
 
           unless manual_spacer?
             elm.insertAfter(spacer)

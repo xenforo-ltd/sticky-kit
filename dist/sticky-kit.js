@@ -81,6 +81,7 @@
         if (fixed) {
           fixed = false;
           bottomed = false;
+          offset = offset_top;
           if (manual_spacer == null) {
             elm.insertAfter(spacer);
             spacer.detach();
