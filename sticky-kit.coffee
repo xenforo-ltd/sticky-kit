@@ -146,7 +146,7 @@ $.fn.stick_in_parent = (opts={}) ->
               }).trigger("sticky_kit:unbottom")
 
           # unfixing
-          if scroll < top
+          if scroll < top || (scroll == 0 && scroll == top)
             fixed = false
             offset = offset_top
 

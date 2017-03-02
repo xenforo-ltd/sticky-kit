@@ -152,7 +152,7 @@
               }).trigger("sticky_kit:unbottom");
             }
           }
-          if (scroll < top) {
+          if (scroll < top || (scroll == 0 && scroll == top)) {
             fixed = false;
             offset = offset_top;
             if (manual_spacer == null) {
