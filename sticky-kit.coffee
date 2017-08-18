@@ -105,7 +105,6 @@ $.fn.stick_in_parent = (opts={}) ->
           tick()
 
       recalc()
-      return if height == parent_height
 
       last_pos = undefined
       offset = offset_top
@@ -114,6 +113,7 @@ $.fn.stick_in_parent = (opts={}) ->
 
       tick = ->
         return if detached
+        return if height == parent_height
         recalced = false
 
         if recalc_counter?

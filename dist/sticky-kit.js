@@ -111,15 +111,16 @@
         }
       };
       recalc();
-      if (height === parent_height) {
-        return;
-      }
+      
       last_pos = void 0;
       offset = offset_top;
       recalc_counter = recalc_every;
       tick = function() {
         var css, delta, recalced, scroll, will_bottom, win_height;
         if (detached) {
+          return;
+        }
+        if (height === parent_height) {
           return;
         }
         recalced = false;
