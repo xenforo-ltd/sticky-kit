@@ -53,6 +53,7 @@ $.fn.stick_in_parent = (opts={}) ->
       parent = parent.closest(parent_selector) if parent_selector?
       throw "failed to find stick parent" unless parent.length
 
+      offset = 0
       fixed = false
       bottomed = false
       spacer = if manual_spacer?
